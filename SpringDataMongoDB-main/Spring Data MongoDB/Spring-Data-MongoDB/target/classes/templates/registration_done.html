@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+><head>
+    <meta charset="UTF-8">
+    <title>Registration_done</title>
+</head>
+<body>
+    <div th:object="${employee}">
+        <p>EmployeeId:  <strong th:text="*{employeeId}"></strong></p>
+        <p>EmployeeName:  <strong th:text="*{employeeName}"></strong></p>
+        <p>EmployeeEmail:  <strong th:text="*{employeeEmail}"></strong></p>
+        <p>Location:  <strong th:text="*{location}"></strong></p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+  <meta charset="UTF-8">
+  <title>SIngel users</title>
+</head>
+<body>
+
+<div th:if="${singelEMployeeByid!=null}">
+
+  <table border="1";>
+    <thead>
+    <tr>
+      <th>Employee ID</th>
+      <th>Employee Name</th>
+      <th>Employee Email</th>
+      <th>EmployeeLocation</th>
+    </tr>
+    </thead>
+
+    <tbody>
+
+    <tr th:object="${singelEMployeeByid}">
+      <td th:text="*{employeeId}"></td>
+      <td th:text="*{employeeName}"></td>
+      <td th:text="*{employeeEmail}"></td>
+      <td th:text="*{location}"></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div th:if="${singelEMployeeByid==null}">
+  <p>There was not data in this employee id</p>
+</div>
+</body>
+</html>
